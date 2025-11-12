@@ -5,7 +5,7 @@ on:
 
 jobs:
   build:
-    runs-on: [LAPTOP-FGJ13DK5]  # 👈 specify kiya specific runner name
+    runs-on: [self-hosted, LAPTOP-FGJ13DK5]  # 👈 specify kiya specific runner name
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
