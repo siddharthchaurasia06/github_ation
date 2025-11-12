@@ -1,0 +1,19 @@
+name: Manual Run on My Laptop Runner
+
+on:
+  workflow_dispatch:   # manually run karne ke liye
+
+jobs:
+  build:
+    runs-on: [LAPTOP-FGJ13DK5]  # 👈 specify kiya specific runner name
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Verify runner identity
+        run: |
+          echo "🏃 Running on: ${{ runner.name }}"
+          echo "✅ This job is running on LAPTOP-FGJ13DK5"
+
+      - name: Simple test step
+        run: echo "🎉 Manual workflow executed successfully!"
